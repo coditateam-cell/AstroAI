@@ -1,0 +1,48 @@
+To run the JyotishAI project, you will need to set up and run three distinct parts: the Frontend, the Backend, and the Agent.
+
+A complete overview is available in 
+
+jyotishai/README.md
+. Below are the Windows-specific steps for each component:
+
+1. Environment Setup
+Before running the services, ensure you have set up the environment variables in these files:
+
+Backend: 
+
+backend/.env
+Agent: 
+
+agent/.env
+Frontend: 
+
+frontend/.env.local
+2. Running the Frontend (Next.js)
+Open a terminal at the project root and run:
+
+powershell
+cd jyotishai/frontend
+npm install
+npm run dev
+The frontend will run at http://localhost:3000.
+
+3. Running the Backend (FastAPI)
+Open a new terminal at the project root and run:
+
+powershell
+cd jyotishai/backend
+python -m venv venv
+venv\Scripts\activate
+pip install -r requirements.txt
+uvicorn app.main:app --reload
+The backend will run at http://localhost:8000.
+
+4. Running the Agent (Vedic Astrology Voice Assistant)
+Open a new terminal at the project root and run:
+
+powershell
+cd jyotishai/agent
+python -m venv venv
+venv\Scripts\activate
+pip install -r requirements.txt
+python main.py

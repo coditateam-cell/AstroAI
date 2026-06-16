@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #030308; /* Deep celestial dark */
+  --foreground: #f4f4f8;
+  --bg-card: rgba(13, 13, 25, 0.7);
+  --border: rgba(200, 184, 248, 0.12);
+  --purple-light: #c8b8f8;
+  --purple-primary: #8a63f5;
+  --purple-dark: #4d2cb3;
+  --text-primary: #f4f4f8;
+  --text-muted: #a0a2b5;
+  --gold: #f5c842;
+  --gold-glow: rgba(245, 200, 66, 0.15);
+  --success: #4ade80;
+  --text-hint: #6e7085;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: 'DM Sans', sans-serif;
+  overflow-x: hidden;
+  position: relative;
+  min-height: 100vh;
+}
+
+/* Twinkle keyframes for StarField background */
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 0.15;
+    transform: translateY(0) scale(0.8);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-2px) scale(1.2);
+  }
+}
+
+/* Custom fade animation for smooth screen transitions */
+.fade-in {
+  animation: fadeIn 0.4s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

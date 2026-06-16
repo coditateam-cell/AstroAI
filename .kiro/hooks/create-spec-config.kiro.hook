@@ -1,0 +1,13 @@
+{
+  "enabled": true,
+  "name": "Create Spec Config",
+  "description": "Create spec directory and config for detailed-report-enhancement feature",
+  "version": "1",
+  "when": {
+    "type": "userTriggered"
+  },
+  "then": {
+    "type": "runCommand",
+    "command": ""
+  }
+}
