@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
+import CosmicTransitSlider from './transit/CosmicTransitSlider'
 
 interface PlanetData {
   sign: string
@@ -1472,6 +1473,35 @@ export default function ChartPreview({ chart, onStartSession }: ChartPreviewProp
           </div>
         </div>
       )}
+
+      {/* ── INTERACTIVE COSMIC TRANSIT FORECAST ── */}
+      <div style={{ width: '100%', borderTop: '1px solid rgba(255, 255, 255, 0.08)', paddingTop: '40px', marginTop: '20px' }}>
+        <div style={{ textAlign: 'center', marginBottom: '32px' }}>
+          <span style={{
+            display: 'inline-flex',
+            alignItems: 'center',
+            padding: '4px 12px',
+            borderRadius: '9999px',
+            fontSize: '10px',
+            fontWeight: 700,
+            letterSpacing: '0.05em',
+            textTransform: 'uppercase',
+            background: 'rgba(245, 200, 66, 0.1)',
+            border: '1px solid rgba(245, 200, 66, 0.2)',
+            color: '#f5c842',
+            marginBottom: '12px'
+          }}>
+            Interactive Forecasting
+          </span>
+          <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: '28px', fontWeight: 700, color: '#fff', margin: 0 }}>
+            Cosmic Transit Weather
+          </h2>
+          <p style={{ color: 'var(--text-muted)', fontSize: '14px', marginTop: '8px', maxWidth: '600px', marginLeft: 'auto', marginRight: 'auto' }}>
+            Witness how the planetary orbits shift and recalculate Vedic transits in real-time. Drag the cosmic dial to forecast the next 12 months.
+          </p>
+        </div>
+        <CosmicTransitSlider />
+      </div>
     </div>
   )
 }

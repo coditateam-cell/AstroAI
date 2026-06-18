@@ -14,6 +14,9 @@ export default function Navbar() {
             <Link href="/onboarding" className="hover:text-gray-600">
               Onboarding
             </Link>
+            <Link href="/transit" className="hover:text-gray-600">
+              Transit Slider
+            </Link>
             <Link href="/session" className="hover:text-gray-600">
               Session
             </Link>
